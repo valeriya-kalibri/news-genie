@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+langgraph
+langchain-anthropic
+langchain-core
+httpx
+python-dotenv
+pydantic
+langgraph-cli[inmem]
+langsmith

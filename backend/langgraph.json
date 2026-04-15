@@ -1,0 +1,9 @@
+{
+    "dependencies": [
+        "."
+    ],
+    "graphs": {
+        "newsgenie": "./graph/workflow.py:graph"
+    },
+    "env": ".env"
+}

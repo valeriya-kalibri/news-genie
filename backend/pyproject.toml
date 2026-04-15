@@ -1,0 +1,28 @@
+# =============================================================================
+# WHAT THIS FILE DOES
+# =============================================================================
+#
+# This file tells Python's packaging system how to install our backend code
+# as a proper package. The LangGraph CLI needs this when it runs
+# `langgraph dev` — it reads langgraph.json, sees the dependency ".",
+# and uses this file to install our local `graph` and `api` folders so
+# they can be imported correctly.
+#
+# Without this file, `langgraph dev` would fail with an import error
+# because Python wouldn't know how to find our graph/ folder.
+#
+# You never need to edit this file.
+# =============================================================================
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "newsgenie-backend"
+version = "0.1.0"
+requires-python = ">=3.11"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["graph*", "api*"]
